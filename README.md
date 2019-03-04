@@ -1,16 +1,16 @@
 # sftputility
 **A simple java utility which provides a wrapper over JSCH library to perform some useful sftp operations.**
 
-####Note:
+#### Note:
 * Uses [JSCH](http://www.jcraft.com/jsch/) version **0.1.54**
 * Uses *commons-logging* version **1.2**
 * Uses [lombok][1] with builder pattern
 
-####Requirements
+#### Requirements
 * Java 8
 * Lombok plugin installed as per your **IDE** (Check **Install** section of [lombok][1])
 
-####Usage with spring boot
+#### Usage with spring boot
 Read the mandatory properties into a bean:
 ```java
 @Getter
@@ -74,7 +74,7 @@ contains directories not created till terminal directory.
 9. Delete multiple files with given *list* of absolute remote file path. 
 10. Move multiple files with their absolute file path to a given remote path.
 
-<b>Points to keep in mind while using this utility: <b>
+### Points to keep in mind while using this utility:
 * `homepath` property should follow sftp protocol file separator i.e. */* and should not end in */*  
 i.e. */home/user*
 * If the `destRelativePath` variable is passed as null, then it will default to `homepath` in all
@@ -88,7 +88,7 @@ and */* for Linux/Mac based operating system since internally Java's NIO `Path` 
 handle local file paths which makes this library perform operations to and from Windows/Linux Operating systems.
 
 
-###Improvements / Suggestions
+### Improvements / Suggestions
 Due to time constraints, I could not avoid the duplication of creating session and channel code
 across all functions. This might be refactored in one way such as:  
 Call a common method say `doSftpOperation(OperationType, RequiredArguments)` which internally  
