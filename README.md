@@ -117,4 +117,4 @@ Apache Mina would be welcome!
 Feel free to tinker around this code and improve this further!  
 
 
-[1]: (https://projectlombok.org/)
+[1]: https://projectlombok.org/
